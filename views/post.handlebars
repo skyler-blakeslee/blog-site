@@ -4,11 +4,20 @@
     <p>{{description}}</p>
     <p>Created by {{user.name}} on {{format_date date_created}}</p>
     <p>
-        <span for="img" aria-label="money">💲</span>
-        <span class="dollar-amount">{{format_amount needed_funding}}</span>
-        needed
-    </p>
-    <p>
-        <button class="btn btn-primary">Add Comment</button>
+    <form class="form new-comment-form">
+        <div class="form-group">
+            <label for="comment-title">Title:</label>
+            <input class="form-input" type="text" id="comment-title" name="comment-title" />
+        </div>
+        <div class="form-group">
+            <label for="comment-desc">What's on your mind?:</label>
+            <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
+            <input type="hidden" id="post_id" value="{{id}}" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
+    <button class="btn btn-primary">Add Comment</button>
     </p>
 </div>
