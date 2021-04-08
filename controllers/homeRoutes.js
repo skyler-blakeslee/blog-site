@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -27,26 +27,35 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', (req, res) => {
     try {
-        const postData = await Post.findByPk(req.params.id, {
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-            ],
-        });
-
-        const post = postData.get({ plain: true });
-
-        res.render('post', {
-            ...post,
-            logged_in: req.session.logged_in
-        });
+        Post.findByPk(req.params.id, {
+        })
+            .then((postData) => {
+                console.log("post data: ", postData);
+                let post = postData.get({ plain: true });
+                Comment.findAll({
+                    where: { post_id: req.params.id },
+                })
+                    .then(commentData => {
+                        console.log("Comment Data: ", commentData);
+                        let postAndComments = {
+                            post: post,
+                            comments: commentData
+                        };
+                        console.table(postAndComments);
+                        res.render('post', {
+                            ...postAndComments,
+                            logged_in: req.session.logged_in
+                        });
+                    }).catch(err => {
+                        res.status(500).json(err);
+                    })
+            }).catch(err => {
+                res.status(500).json(err);
+            });
     } catch (err) {
-        res.status(500).json(err);
-    }
+    };
 });
 
 // Use withAuth middleware to prevent access to route
