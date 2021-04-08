@@ -4,7 +4,7 @@
     <p>{{post.description}}</p>
     <p>Created by {{user.name}} on {{format_date post.date_created}}</p>
 
-    <!-- Added Display Comments-->
+    <!-- Conditionally Display Comments-->
     {{#if comments}}
     <div class="col-md-6 post-list">
         <h3>Comments:</h3>
@@ -20,25 +20,22 @@
     </div>
     {{/if}}
 
-
-
+    <!-- Conditionally render comment form if user is logged in-->
+    {{#if logged_in}}
     <p>
     <form class="form new-comment-form">
         <div class="form-group">
-            <label for="comment-title">Title:</label>
-            <input class="form-input" type="text" id="comment-title" name="comment-title" />
-        </div>
-        <div class="form-group">
-            <label for="comment-desc">What's on your mind?:</label>
+            <label for="comment-desc">Comments:</label>
             <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
             <input type="hidden" id="post_id" value="{{id}}" />
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary">Add Comment</button>
         </div>
     </form>
-    <button class="btn btn-primary">Add Comment</button>
     </p>
+    {{/if}}
+
 </div>
 
 <script src="../js/post.js"></script>
