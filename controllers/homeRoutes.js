@@ -38,10 +38,12 @@ router.get('/post/:id', (req, res) => {
                     where: { post_id: req.params.id },
                 })
                     .then(commentData => {
-                        console.log("Comment Data: ", commentData);
+                        const comment = commentData.map((comment) => comment.get({ plain: true }))
+                        console.log("Comment Data: ", comment);
                         let postAndComments = {
                             post: post,
-                            comments: commentData
+                            id: req.params.id,
+                            comments: comment
                         };
                         console.table(postAndComments);
                         res.render('post', {

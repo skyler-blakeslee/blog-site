@@ -11,10 +11,11 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        // comment name not required
+        // name: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        // },
         description: {
             type: DataTypes.STRING,
         },
