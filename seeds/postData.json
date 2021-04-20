@@ -1,14 +1,14 @@
 [
     {
-        "name": "Too many viruses",
-        "description": "People have been finding too many viruses."
+        "name": "Desperately seeking alternative to handlebars?",
+        "description": "The answer is lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet pretium mauris, vel convallis elit. Etiam faucibus, dui ut porttitor sollicitudin, elit ipsum malesuada nisl, id tristique velit urna pellentesque eros. Donec blandit id justo a egestas. Etiam suscipit sollicitudin velit, sed accumsan odio. Nam congue enim metus, id mollis quam tincidunt in. Phasellus vulputate mattis dignissim. Donec mollis nunc eu dolor tempus viverra. In id tellus vel risus euismod tempus congue sed nunc. Donec interdum, metus at porttitor posuere, sem dolor tempus mi, eu maximus risus dolor ut dui."
     },
     {
-        "name": "New, unnecessary versions of things",
-        "description": "Why do people make unnecessary versions of things?"
+        "name": "Understanding MySQL",
+        "description": "A good approach to learning mySQL is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet pretium mauris, vel convallis elit. Etiam faucibus, dui ut porttitor sollicitudin, elit ipsum malesuada nisl, id tristique velit urna pellentesque eros. Donec blandit id justo a egestas. Etiam suscipit sollicitudin velit, sed accumsan odio. Nam congue enim metus, id mollis quam tincidunt in. Phasellus vulputate mattis dignissim. Donec mollis nunc eu dolor tempus viverra. In id tellus vel risus euismod tempus congue sed nunc. Donec interdum, metus at porttitor posuere, sem dolor tempus mi, eu maximus risus dolor ut dui."
     },
     {
-        "name": "Is AI actually intelligent",
-        "description": "How can we know the answer to this?"
+        "name": "Are you ready to move beyond Bootstrap?",
+        "description": "Maybe it's time for a new framework. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet pretium mauris, vel convallis elit. Etiam faucibus, dui ut porttitor sollicitudin, elit ipsum malesuada nisl, id tristique velit urna pellentesque eros. Donec blandit id justo a egestas. Etiam suscipit sollicitudin velit, sed accumsan odio. Nam congue enim metus, id mollis quam tincidunt in. Phasellus vulputate mattis dignissim. Donec mollis nunc eu dolor tempus viverra. In id tellus vel risus euismod tempus congue sed nunc. Donec interdum, metus at porttitor posuere, sem dolor tempus mi, eu maximus risus dolor ut dui."
     }
 ]
