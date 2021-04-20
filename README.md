@@ -2,7 +2,7 @@
 
 A basic CMS blog site developed by Skyler Blakeslee.
 
-URL:
+URL: https://dry-sierra-40120.herokuapp.com/
 Git Repository: https://github.com/skyler-blakeslee/blog-site
 
 ## Table of Contents
